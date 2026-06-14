@@ -1,716 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ansa Mubasher</title>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<div align="center">
 
-:root {
-  --bg:        #fdf6f0;
-  --bg2:       #fef9f5;
-  --rose:      #f2a8b8;
-  --rose-deep: #e07d95;
-  --lavender:  #c9b8e8;
-  --lav-deep:  #9b82d4;
-  --mint:      #a8d8c8;
-  --mint-deep: #6bbaa4;
-  --peach:     #f5c5a3;
-  --sky:       #b3d4f0;
-  --sand:      #e8d9c8;
-  --text:      #3a2e2e;
-  --muted:     #8a7a7a;
-  --border:    #e8ddd8;
-  --card:      #fffaf8;
-  --mono:      'DM Mono', monospace;
-  --serif:     'Lora', serif;
-  --sans:      'DM Sans', sans-serif;
-}
+# hi, i'm ansa mubasher 👋
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.65;
-  min-height: 100vh;
-}
+*Computer Science Undergraduate @ FAST NUCES Lahore*
 
-/* subtle paper texture overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-}
+Building full-stack applications, AI-powered products, and automation systems that solve real-world problems.
 
-.wrapper {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 48px 24px 64px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ─── HEADER ─── */
-.header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 28px;
-  align-items: center;
-  margin-bottom: 52px;
-  padding-bottom: 40px;
-  border-bottom: 1.5px dashed var(--border);
-}
-
-@media (max-width: 520px) { .header { grid-template-columns: 1fr; } }
-
-.avatar {
-  width: 88px; height: 88px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--rose) 0%, var(--lavender) 50%, var(--mint) 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif);
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
-  box-shadow: 0 4px 24px rgba(194,140,160,0.25);
-  flex-shrink: 0;
-  position: relative;
-}
-
-.avatar::after {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--rose), var(--lavender), var(--mint));
-  z-index: -1;
-  opacity: 0.4;
-  filter: blur(6px);
-}
-
-.header-text h1 {
-  font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-}
-
-.header-text h1 em {
-  font-style: italic;
-  color: var(--rose-deep);
-}
-
-.role-chip {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--lav-deep);
-  background: #f0ebfc;
-  border: 1px solid var(--lavender);
-  border-radius: 100px;
-  padding: 3px 12px;
-  letter-spacing: 0.02em;
-}
-
-.tagline {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 13.5px;
-  font-weight: 300;
-  max-width: 500px;
-}
-
-/* ─── SECTION LABEL ─── */
-.section { margin-bottom: 48px; }
-
-.section-label {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--text);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.section-label .dot {
-  display: inline-block;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ─── TECH STACK ─── */
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 10px;
-}
-
-.stack-card {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 14px;
-  padding: 14px 16px 16px;
-  position: relative;
-  overflow: hidden;
-}
-
-.stack-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  border-radius: 14px 14px 0 0;
-}
-
-.stack-card.c1::before { background: var(--rose); }
-.stack-card.c2::before { background: var(--peach); }
-.stack-card.c3::before { background: var(--lavender); }
-.stack-card.c4::before { background: var(--mint); }
-.stack-card.c5::before { background: var(--sky); }
-.stack-card.c6::before { background: var(--sand); }
-
-.stack-card .cat {
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.stack-card.c1 .cat { color: var(--rose-deep); }
-.stack-card.c2 .cat { color: #c07840; }
-.stack-card.c3 .cat { color: var(--lav-deep); }
-.stack-card.c4 .cat { color: var(--mint-deep); }
-.stack-card.c5 .cat { color: #4d8fcc; }
-.stack-card.c6 .cat { color: #9a8060; }
-
-.stack-card .items {
-  color: var(--text);
-  font-size: 12.5px;
-  line-height: 1.85;
-}
-
-/* ─── PROJECTS ─── */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-@media (max-width: 560px) { .projects-grid { grid-template-columns: 1fr; } }
-
-.proj {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 16px;
-  padding: 20px;
-  transition: transform 0.18s, box-shadow 0.18s;
-  cursor: default;
-}
-
-.proj:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(180,140,160,0.18);
-}
-
-.proj-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.proj-icon {
-  width: 36px; height: 36px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.proj.p1 .proj-icon { background: #fde8ed; }
-.proj.p2 .proj-icon { background: #eee8fb; }
-.proj.p3 .proj-icon { background: #e6f5f0; }
-.proj.p4 .proj-icon { background: #fdf0e6; }
-.proj.p5 .proj-icon { background: #e8f2fb; }
-
-.proj h3 {
-  font-family: var(--sans);
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.3;
-}
-
-.proj p {
-  font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 12px;
-}
-
-.tag {
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 500;
-  padding: 3px 9px;
-  border-radius: 100px;
-  border: 1px solid;
-}
-
-.proj.p1 .tag { background: #fde8ed; color: var(--rose-deep); border-color: var(--rose); }
-.proj.p2 .tag { background: #eee8fb; color: var(--lav-deep); border-color: var(--lavender); }
-.proj.p3 .tag { background: #e6f5f0; color: var(--mint-deep); border-color: var(--mint); }
-.proj.p4 .tag { background: #fdf0e6; color: #c07840; border-color: var(--peach); }
-.proj.p5 .tag { background: #e8f2fb; color: #4d8fcc; border-color: var(--sky); }
-
-/* ─── LEADERSHIP ─── */
-.leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.lead-item {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  padding: 13px 16px;
-  font-size: 13px;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.lead-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ─── SNAKE SECTION ─── */
-.snake-section {
-  margin-bottom: 48px;
-}
-
-.snake-wrap {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 16px;
-  padding: 24px 20px 16px;
-  overflow: hidden;
-}
-
-canvas#snake {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.snake-legend {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-  align-items: center;
-}
-
-.snake-legend span {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.swatch {
-  width: 10px; height: 10px;
-  border-radius: 2px;
-  display: inline-block;
-}
-
-/* ─── CONNECT ─── */
-.connect-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 100px;
-  padding: 9px 18px;
-  font-size: 13px;
-  color: var(--text);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-weight: 500;
-  transition: background 0.18s, border-color 0.18s, transform 0.15s;
-}
-
-.pill:hover {
-  background: #fde8ed;
-  border-color: var(--rose);
-  transform: translateY(-1px);
-}
-
-/* ─── FOOTER ─── */
-.footer {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1.5px dashed var(--border);
-  text-align: center;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 13.5px;
-  color: var(--muted);
-}
-</style>
-</head>
-<body>
-<div class="wrapper">
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="avatar">AM</div>
-    <div class="header-text">
-      <h1>Hi, I'm <em>Ansa Mubasher</em> 👋</h1>
-      <div class="role-chip">CS Undergraduate @ FAST NUCES Lahore</div>
-      <p class="tagline">Building full-stack applications, AI-powered products, and automation systems that solve real-world problems.</p>
-    </div>
-  </header>
-
-  <!-- TECH STACK -->
-  <section class="section">
-    <div class="section-label">
-      <span class="dot" style="background:var(--lavender)"></span>
-      Tech Stack
-    </div>
-    <div class="stack-grid">
-      <div class="stack-card c1">
-        <div class="cat">Languages</div>
-        <div class="items">Python · JavaScript · Java · C++ · SQL</div>
-      </div>
-      <div class="stack-card c2">
-        <div class="cat">Backend & APIs</div>
-        <div class="items">Node.js · Express.js · FastAPI · Flask · REST APIs · JWT</div>
-      </div>
-      <div class="stack-card c3">
-        <div class="cat">Frontend</div>
-        <div class="items">React · Next.js · HTML · CSS</div>
-      </div>
-      <div class="stack-card c4">
-        <div class="cat">Databases</div>
-        <div class="items">MongoDB · ChromaDB</div>
-      </div>
-      <div class="stack-card c5">
-        <div class="cat">AI / ML</div>
-        <div class="items">LangChain · Hugging Face · PyTorch · Scikit-Learn · Pandas · NumPy</div>
-      </div>
-      <div class="stack-card c6">
-        <div class="cat">Tools</div>
-        <div class="items">Git · GitHub · Postman · n8n</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section">
-    <div class="section-label">
-      <span class="dot" style="background:var(--rose)"></span>
-      Featured Projects
-    </div>
-    <div class="projects-grid">
-
-      <div class="proj p1">
-        <div class="proj-header">
-          <div class="proj-icon">🤖</div>
-          <h3>AI Emotional Assistant</h3>
-        </div>
-        <p>Full-stack emotional support platform combining stress prediction, empathetic dialogue, and personalized guidance.</p>
-        <div class="tags">
-          <span class="tag">MERN</span>
-          <span class="tag">Flask</span>
-          <span class="tag">BlenderBot</span>
-          <span class="tag">FLAN-T5</span>
-        </div>
-      </div>
-
-      <div class="proj p2">
-        <div class="proj-header">
-          <div class="proj-icon">🎯</div>
-          <h3>AI Career Assistant</h3>
-        </div>
-        <p>Career platform with semantic resume-job matching, AI resume rewriting, ATS scoring, and cover letter generation.</p>
-        <div class="tags">
-          <span class="tag">FastAPI</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Sentence Transformers</span>
-          <span class="tag">Mistral</span>
-        </div>
-      </div>
-
-      <div class="proj p3">
-        <div class="proj-header">
-          <div class="proj-icon">📚</div>
-          <h3>Research Assistant (RAG)</h3>
-        </div>
-        <p>Retrieval-Augmented Generation assistant for context-aware Q&amp;A using open-source LLMs and vector search.</p>
-        <div class="tags">
-          <span class="tag">LangChain</span>
-          <span class="tag">ChromaDB</span>
-          <span class="tag">Sentence Transformers</span>
-        </div>
-      </div>
-
-      <div class="proj p4">
-        <div class="proj-header">
-          <div class="proj-icon">💼</div>
-          <h3>FAST Freelancing Platform</h3>
-        </div>
-        <p>MERN-based marketplace with authentication, protected APIs, bid management, and responsive user workflows.</p>
-        <div class="tags">
-          <span class="tag">MongoDB</span>
-          <span class="tag">Express</span>
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-        </div>
-      </div>
-
-      <div class="proj p5">
-        <div class="proj-header">
-          <div class="proj-icon">⚡</div>
-          <h3>Work Automation Agent</h3>
-        </div>
-        <p>Automation workflows integrating Gmail and Google Calendar through n8n to streamline repetitive tasks.</p>
-        <div class="tags">
-          <span class="tag">n8n</span>
-          <span class="tag">Gmail API</span>
-          <span class="tag">Google Calendar</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTRIBUTION SNAKE -->
-  <section class="section snake-section">
-    <div class="section-label">
-      <span class="dot" style="background:var(--mint)"></span>
-      Contribution Activity
-    </div>
-    <div class="snake-wrap">
-      <canvas id="snake" width="840" height="128"></canvas>
-      <div class="snake-legend">
-        <span><span class="swatch" style="background:#f0e8e8"></span> No contributions</span>
-        <span><span class="swatch" style="background:#f2c4cc"></span> Low</span>
-        <span><span class="swatch" style="background:#e8a0b0"></span> Medium</span>
-        <span><span class="swatch" style="background:#d4607c"></span> High</span>
-        <span style="margin-left:auto;font-size:9px;letter-spacing:0.04em">CONTRIBUTIONS · LAST 52 WEEKS</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section class="section">
-    <div class="section-label">
-      <span class="dot" style="background:var(--peach)"></span>
-      Leadership &amp; Activities
-    </div>
-    <div class="leadership-grid">
-      <div class="lead-item"><span class="lead-dot" style="background:var(--rose)"></span> ACM Assistant Vice President</div>
-      <div class="lead-item"><span class="lead-dot" style="background:var(--lavender)"></span> SOFTEC Competition Head</div>
-      <div class="lead-item"><span class="lead-dot" style="background:var(--mint)"></span> FAST Dean's List Honoree</div>
-      <div class="lead-item"><span class="lead-dot" style="background:var(--peach)"></span> Technical Event Organizer</div>
-    </div>
-  </section>
-
-  <!-- CONNECT -->
-  <section class="section">
-    <div class="section-label">
-      <span class="dot" style="background:var(--sky)"></span>
-      Let's Connect
-    </div>
-    <div class="connect-row">
-      <a class="pill" href="mailto:ansamubasher@gmail.com">📧 ansamubasher@gmail.com</a>
-      <a class="pill" href="#">💼 LinkedIn</a>
-      <a class="pill" href="#">🌐 Portfolio</a>
-      <a class="pill" href="#">💻 GitHub</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    Building software, AI systems, and products that create meaningful impact.
-  </footer>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23F2C4CC.svg?style=for-the-badge&logo=vercel&logoColor=333)](https://YOUR_PORTFOLIO)
+[![Gmail](https://img.shields.io/badge/Gmail-%23F5C5A3.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
 
 </div>
 
-<script>
-// ─── CONTRIBUTION SNAKE ANIMATION ───
-(function() {
-  const canvas = document.getElementById('snake');
-  const ctx = canvas.getContext('2d');
+---
 
-  const COLS = 52;
-  const ROWS = 7;
-  const PAD  = 3;
+## 🛠 tech stack
 
-  // ── build a plausible contribution grid ──
-  const grid = [];
-  for (let c = 0; c < COLS; c++) {
-    grid[c] = [];
-    for (let r = 0; r < ROWS; r++) {
-      // weighted random: heavier toward recent weeks
-      const bias = 0.3 + 0.5 * (c / COLS);
-      const rand = Math.random();
-      if (rand > bias + 0.35) grid[c][r] = 0;
-      else if (rand > bias + 0.15) grid[c][r] = 1;
-      else if (rand > bias - 0.05) grid[c][r] = 2;
-      else grid[c][r] = 3;
-    }
-  }
+**Languages**
 
-  // ── cell colours (pastel rose scale) ──
-  const CELL_COLORS = ['#f5eced', '#f2c4cc', '#e8a0b0', '#d4607c'];
-  const SNAKE_COLOR = '#d4607c';
-  const SNAKE_HEAD  = '#a63050';
-  const SNAKE_EYE   = '#fff';
+![Python](https://img.shields.io/badge/Python-FFE4E8?style=flat-square&logo=python&logoColor=c0607a)
+![JavaScript](https://img.shields.io/badge/JavaScript-FFF0E0?style=flat-square&logo=javascript&logoColor=c07840)
+![Java](https://img.shields.io/badge/Java-EEE8FB?style=flat-square&logo=openjdk&logoColor=9b82d4)
+![C++](https://img.shields.io/badge/C++-E6F5F0?style=flat-square&logo=cplusplus&logoColor=6bbaa4)
+![SQL](https://img.shields.io/badge/SQL-E8F2FB?style=flat-square&logo=postgresql&logoColor=4d8fcc)
 
-  // ── sizing ──
-  function getCell() {
-    const W = canvas.clientWidth || canvas.width;
-    const cell = Math.floor((W - PAD) / COLS) - PAD;
-    return Math.max(cell, 6);
-  }
+**Backend & APIs**
 
-  function resize() {
-    const W = canvas.clientWidth || 840;
-    const cell = getCell();
-    canvas.width  = W;
-    canvas.height = ROWS * (cell + PAD) + PAD + 1;
-  }
+![Node.js](https://img.shields.io/badge/Node.js-FFE4E8?style=flat-square&logo=nodedotjs&logoColor=c0607a)
+![Express](https://img.shields.io/badge/Express-FFF0E0?style=flat-square&logo=express&logoColor=c07840)
+![FastAPI](https://img.shields.io/badge/FastAPI-EEE8FB?style=flat-square&logo=fastapi&logoColor=9b82d4)
+![Flask](https://img.shields.io/badge/Flask-E6F5F0?style=flat-square&logo=flask&logoColor=6bbaa4)
+![JWT](https://img.shields.io/badge/JWT-E8F2FB?style=flat-square&logo=jsonwebtokens&logoColor=4d8fcc)
 
-  // ── snake path: visits every non-zero cell ──
-  function buildPath() {
-    const path = [];
-    for (let c = 0; c < COLS; c++) {
-      const rows = c % 2 === 0
-        ? Array.from({length: ROWS}, (_, i) => i)
-        : Array.from({length: ROWS}, (_, i) => ROWS - 1 - i);
-      for (const r of rows) {
-        if (grid[c][r] > 0) path.push([c, r]);
-      }
-    }
-    return path;
-  }
+**Frontend**
 
-  const path = buildPath();
+![React](https://img.shields.io/badge/React-FFE4E8?style=flat-square&logo=react&logoColor=c0607a)
+![Next.js](https://img.shields.io/badge/Next.js-FFF0E0?style=flat-square&logo=nextdotjs&logoColor=c07840)
+![HTML](https://img.shields.io/badge/HTML-EEE8FB?style=flat-square&logo=html5&logoColor=9b82d4)
+![CSS](https://img.shields.io/badge/CSS-E6F5F0?style=flat-square&logo=css3&logoColor=6bbaa4)
 
-  // ── animation state ──
-  const SNAKE_LEN = 10; // segments visible
-  let head = 0;
+**AI / ML**
 
-  function cellPos(c, r) {
-    const cell = getCell();
-    return {
-      x: PAD + c * (cell + PAD),
-      y: PAD + r * (cell + PAD),
-      s: cell
-    };
-  }
+![LangChain](https://img.shields.io/badge/LangChain-FFE4E8?style=flat-square&logo=chainlink&logoColor=c0607a)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFF0E0?style=flat-square&logo=huggingface&logoColor=c07840)
+![PyTorch](https://img.shields.io/badge/PyTorch-EEE8FB?style=flat-square&logo=pytorch&logoColor=9b82d4)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-E6F5F0?style=flat-square&logo=scikitlearn&logoColor=6bbaa4)
+![Pandas](https://img.shields.io/badge/Pandas-E8F2FB?style=flat-square&logo=pandas&logoColor=4d8fcc)
 
-  function draw(ts) {
-    resize();
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+**Databases & Tools**
 
-    const cell = getCell();
+![MongoDB](https://img.shields.io/badge/MongoDB-FFE4E8?style=flat-square&logo=mongodb&logoColor=c0607a)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FFF0E0?style=flat-square&logo=databricks&logoColor=c07840)
+![Git](https://img.shields.io/badge/Git-EEE8FB?style=flat-square&logo=git&logoColor=9b82d4)
+![Postman](https://img.shields.io/badge/Postman-E6F5F0?style=flat-square&logo=postman&logoColor=6bbaa4)
+![n8n](https://img.shields.io/badge/n8n-E8F2FB?style=flat-square&logo=n8n&logoColor=4d8fcc)
 
-    // draw all cells
-    for (let c = 0; c < COLS; c++) {
-      for (let r = 0; r < ROWS; r++) {
-        const {x, y, s} = cellPos(c, r);
-        ctx.fillStyle = CELL_COLORS[grid[c][r]];
-        ctx.beginPath();
-        ctx.roundRect(x, y, s, s, 2);
-        ctx.fill();
-      }
-    }
+---
 
-    // draw snake body
-    const snakeIdxs = [];
-    for (let i = 0; i < SNAKE_LEN; i++) {
-      const idx = (head - i + path.length * 1000) % path.length;
-      snakeIdxs.push(idx);
-    }
+## ✨ featured projects
 
-    snakeIdxs.reverse().forEach((idx, i) => {
-      const [c, r] = path[idx];
-      const {x, y, s} = cellPos(c, r);
-      const alpha = 0.4 + 0.6 * (i / SNAKE_LEN);
-      ctx.globalAlpha = alpha;
-      ctx.fillStyle = SNAKE_COLOR;
-      ctx.beginPath();
-      ctx.roundRect(x - 1, y - 1, s + 2, s + 2, 3);
-      ctx.fill();
-    });
+| &nbsp; | Project | Description | Stack |
+|--------|---------|-------------|-------|
+| 🤖 | **AI Emotional Assistant** | Full-stack emotional support platform combining stress prediction, empathetic dialogue, and personalized guidance | `MERN` `Flask` `BlenderBot` `FLAN-T5` |
+| 🎯 | **AI Career Assistant** | Career platform with semantic resume-job matching, AI resume rewriting, ATS scoring, and cover letter generation | `FastAPI` `Node.js` `Sentence Transformers` `Mistral` |
+| 📚 | **Research Assistant (RAG)** | Retrieval-Augmented Generation assistant for context-aware Q&A using open-source LLMs and vector search | `LangChain` `ChromaDB` `Sentence Transformers` |
+| 💼 | **FAST Freelancing Platform** | MERN-based marketplace with authentication, protected APIs, bid management, and responsive workflows | `MongoDB` `Express` `React` `Node.js` |
+| ⚡ | **Work Automation Agent** | Automation workflows integrating Gmail and Google Calendar through n8n to streamline repetitive tasks | `n8n` `Gmail API` `Google Calendar` |
 
-    ctx.globalAlpha = 1;
+---
 
-    // draw head
-    const [hc, hr] = path[head % path.length];
-    const {x: hx, y: hy, s: hs} = cellPos(hc, hr);
-    ctx.fillStyle = SNAKE_HEAD;
-    ctx.beginPath();
-    ctx.roundRect(hx - 2, hy - 2, hs + 4, hs + 4, 4);
-    ctx.fill();
+## 📊 github stats
 
-    // eye
-    ctx.fillStyle = SNAKE_EYE;
-    ctx.beginPath();
-    ctx.arc(hx + hs * 0.65, hy + hs * 0.3, hs * 0.15, 0, Math.PI * 2);
-    ctx.fill();
+<div align="center">
 
-    // advance head every ~80ms
-    if (!draw._last || ts - draw._last > 80) {
-      head = (head + 1) % path.length;
-      draw._last = ts;
-    }
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&icon_color=e8a0b0&text_color=3a2e2e&ring_color=f2c4cc" />
+&nbsp;&nbsp;
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&text_color=3a2e2e" />
 
-    requestAnimationFrame(draw);
-  }
+</div>
 
-  resize();
-  requestAnimationFrame(draw);
-})();
-</script>
-</body>
-</html>
+---
+
+## 🐍 contribution activity
+
+<div align="center">
+
+<!--
+  To generate this snake, add this GitHub Action to your profile repo:
+  .github/workflows/snake.yml  (see setup instructions below)
+-->
+
+![snake gif](https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/blob/output/github-contribution-grid-snake.gif)
+
+</div>
+
+> **Snake setup:** Create a repo named exactly `YOUR_GITHUB_USERNAME`, then add the file below at `.github/workflows/snake.yml`:
+>
+> ```yaml
+> name: Generate Snake
+> on:
+>   schedule: [{ cron: "0 0 * * *" }]
+>   workflow_dispatch:
+> jobs:
+>   generate:
+>     runs-on: ubuntu-latest
+>     steps:
+>       - uses: Platane/snk/svg-only@v3
+>         with:
+>           github_user_name: ${{ github.repository_owner }}
+>           outputs: dist/github-contribution-grid-snake.gif
+>       - uses: crazy-max/ghaction-github-pages@v3
+>         with:
+>           target_branch: output
+>           build_dir: dist
+>         env:
+>           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+> ```
+>
+> After the Action runs once, replace `YOUR_GITHUB_USERNAME` in the image URL above with your real username.
+
+---
+
+## 🏅 leadership & activities
+
+- 🌸 **ACM Assistant Vice President** — led events and community initiatives
+- 🌿 **SOFTEC Competition Head** — organized one of Pakistan's largest CS competitions
+- ⭐ **FAST Dean's List Honoree** — academic excellence recognition
+- 🎪 **Technical Event Organizer** — multiple programming contests and workshops
+
+---
+
+## 💌 let's connect
+
+*Building software, AI systems, and products that create meaningful impact.*
+
+[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
+[![Email](https://img.shields.io/badge/Send%20an%20Email-%23F2C4CC.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Visit%20Portfolio-%23A8D8C8.svg?style=for-the-badge&logo=vercel&logoColor=333)](https://YOUR_PORTFOLIO)
