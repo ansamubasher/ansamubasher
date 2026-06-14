@@ -80,45 +80,7 @@ Building full-stack applications, AI-powered products, and automation systems th
 
 ---
 
-## 🐍 contribution activity
 
-<div align="center">
-
-<!--
-  To generate this snake, add this GitHub Action to your profile repo:
-  .github/workflows/snake.yml  (see setup instructions below)
--->
-
-![snake gif](https://github.com/ansamubasher/ansamubasher/blob/output/github-contribution-grid-snake.gif)
-
-</div>
-
-> **Snake setup:** Create a repo named exactly `ansamubasher`, then add the file below at `.github/workflows/snake.yml`:
->
-> ```yaml
-> name: Generate Snake
-> on:
->   schedule: [{ cron: "0 0 * * *" }]
->   workflow_dispatch:
-> jobs:
->   generate:
->     runs-on: ubuntu-latest
->     steps:
->       - uses: Platane/snk/svg-only@v3
->         with:
->           github_user_name: ${{ github.repository_owner }}
->           outputs: dist/github-contribution-grid-snake.gif
->       - uses: crazy-max/ghaction-github-pages@v3
->         with:
->           target_branch: output
->           build_dir: dist
->         env:
->           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-> ```
->
-> After the Action runs once, replace `ansamubasher` in the image URL above with your real username.
-
----
 
 ## 🏅 Featured leadership & activities
 
