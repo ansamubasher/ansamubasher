@@ -6,7 +6,7 @@
 
 Building full-stack applications, AI-powered products, and automation systems that solve real-world problems.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/ansa-mubasher-751388240)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ansa-mubasher-751388240/)
 [![Gmail](https://img.shields.io/badge/Gmail-%23F5C5A3.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
 
 </div>
@@ -93,7 +93,7 @@ Building full-stack applications, AI-powered products, and automation systems th
 
 </div>
 
-> **Snake setup:** Create a repo named exactly `YOUR_GITHUB_USERNAME`, then add the file below at `.github/workflows/snake.yml`:
+> **Snake setup:** Create a repo named exactly `ansamubasher`, then add the file below at `.github/workflows/snake.yml`:
 >
 > ```yaml
 > name: Generate Snake
@@ -132,5 +132,5 @@ Building full-stack applications, AI-powered products, and automation systems th
 
 *Building software, AI systems, and products that create meaningful impact.*
 
-[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ansa-mubasher-751388240/)
 [![Email](https://img.shields.io/badge/Send%20an%20Email-%23F2C4CC.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
