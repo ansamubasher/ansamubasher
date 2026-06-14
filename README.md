@@ -73,9 +73,9 @@ Building full-stack applications, AI-powered products, and automation systems th
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&icon_color=e8a0b0&text_color=3a2e2e&ring_color=f2c4cc" />
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=ansamubasher&show_icons=true&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&icon_color=e8a0b0&text_color=3a2e2e&ring_color=f2c4cc" />
 &nbsp;&nbsp;
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&text_color=3a2e2e" />
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ansamubasher&layout=compact&theme=rose_pine&hide_border=true&bg_color=fdf6f0&title_color=d4607c&text_color=3a2e2e" />
 
 </div>
 
