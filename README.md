@@ -6,8 +6,7 @@
 
 Building full-stack applications, AI-powered products, and automation systems that solve real-world problems.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23F2C4CC.svg?style=for-the-badge&logo=vercel&logoColor=333)](https://YOUR_PORTFOLIO)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/ansa-mubasher-751388240)
 [![Gmail](https://img.shields.io/badge/Gmail-%23F5C5A3.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
 
 </div>
@@ -90,7 +89,7 @@ Building full-stack applications, AI-powered products, and automation systems th
   .github/workflows/snake.yml  (see setup instructions below)
 -->
 
-![snake gif](https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/blob/output/github-contribution-grid-snake.gif)
+![snake gif](https://github.com/ansamubasher/ansamubasher/blob/output/github-contribution-grid-snake.gif)
 
 </div>
 
@@ -117,16 +116,15 @@ Building full-stack applications, AI-powered products, and automation systems th
 >           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 > ```
 >
-> After the Action runs once, replace `YOUR_GITHUB_USERNAME` in the image URL above with your real username.
+> After the Action runs once, replace `ansamubasher` in the image URL above with your real username.
 
 ---
 
-## 🏅 leadership & activities
+## 🏅 Featured leadership & activities
 
 - 🌸 **ACM Assistant Vice President** — led events and community initiatives
 - 🌿 **SOFTEC Competition Head** — organized one of Pakistan's largest CS competitions
 - ⭐ **FAST Dean's List Honoree** — academic excellence recognition
-- 🎪 **Technical Event Organizer** — multiple programming contests and workshops
 
 ---
 
@@ -136,4 +134,3 @@ Building full-stack applications, AI-powered products, and automation systems th
 
 [![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-%23E8A0B0.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
 [![Email](https://img.shields.io/badge/Send%20an%20Email-%23F2C4CC.svg?style=for-the-badge&logo=gmail&logoColor=333)](mailto:ansamubasher@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Visit%20Portfolio-%23A8D8C8.svg?style=for-the-badge&logo=vercel&logoColor=333)](https://YOUR_PORTFOLIO)
